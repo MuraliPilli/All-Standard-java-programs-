@@ -1,0 +1,741 @@
+1.	Find the Maximum Element in an Array:
+
+public class Maxium_element_inarray {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter array size");
+		int size=sc.nextInt();
+		int []arr=new int[size];
+		System.out.println("enter array elements in one by one order");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i]=sc.nextInt();
+		}
+		int max=0;
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i]>max)
+			{
+				max=arr[i];
+			}
+		}
+		System.out.println("maxium element present in array is - "+max);
+	}
+}
+
+2.	Find the Minimum Element in an Array:
+
+public class Minimum_elementinanarray {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter array size");
+		int size=sc.nextInt();
+		int []arr=new int[size];
+		System.out.println("enter array elements in one by one order");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i]=sc.nextInt();
+		}
+		int min=arr[0];
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i]<min)
+			{
+				min=arr[i];
+			}
+		}
+		System.out.println("the smallest element present in array is "+min);
+	}
+}
+
+3.	WAPTP Even smallest array element.
+
+public class Even_Smallestelement {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter array size");
+		int size=sc.nextInt();
+		int []arr=new int[size];
+		System.out.println("enter array elements in one by one order");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i]=sc.nextInt();
+		}
+		int min=arr[0];
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i]%2==0)
+			{
+				if(arr[i]<min)
+				{
+					min=arr[i];
+				}
+			}
+		}
+		System.out.println("The even smallest element - "+min);
+	}
+}
+
+4    .WAPTP odd smallest array element.
+
+public class Odd_smallestelement {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter array size");
+		int size=sc.nextInt();
+		int []arr=new int[size];
+		System.out.println("enter array elements in one by one order");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i]=sc.nextInt();
+		}
+		int odd=arr[0];
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i]%2==1)
+			{
+				if(arr[i]<odd)
+				{
+					odd= arr[i];
+				}
+			}
+		}
+		System.out.println("smallest element present in given array is "+odd);
+	}
+}
+
+5.	WAPT search a particular element is present or not.
+
+public class Scarch_givenelementpresentornot {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter array size");
+		int size=sc.nextInt();
+		int []arr=new int[size];
+		System.out.println("enter array elements in one by one order");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i]=sc.nextInt();
+		}
+		System.out.println("enter a number to scarch that element"
+				+ " present in an array or not");
+		int n=sc.nextInt();
+		boolean b=false;
+		
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i]==n)
+			{
+				b=true;
+				break;
+			}
+		}
+		if(b==true)
+		{
+			System.out.println(n+" is present in the give array");
+		}else
+		{
+			System.err.println(n+" is not present in the give array");
+		}
+		
+	}
+}
+
+6.	WAPT separate even and Odd elements in the given array
+
+public class Even_OddElement {
+	static Scanner sc=new Scanner(System.in);
+	
+	public static int[] array(int size)
+	{
+		int []arr=new int[size];
+		System.out.println("enter elements one by one order");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i]=sc.nextInt();
+		}
+		return arr;
+	}
+	public static int evencount(int[]arr)
+	{
+		int evencount=0;
+		
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i]%2==0)
+			{
+				evencount++;
+			}
+		}
+		return evencount;
+		
+	}
+	public static int oddcount(int[]arr)
+	{
+		int oddcount=0;
+		
+		for (int i = 0; i < arr.length; i++) {
+			if(arr[i]%2==1)
+			{
+				oddcount++;
+			}
+		}
+		return oddcount;
+	}
+	public static void main(String[] args) {
+		System.out.println("eneter size of an array");
+		int size=sc.nextInt();
+		int[] arr = array(size);
+		int []evenarray=new int[evencount(arr)];
+		int evenindex=0;
+		int []oddarray=new int[oddcount(arr)];
+		int oddindex=0;
+		for (int i = 0; i <arr.length; i++) {
+			if(arr[i]%2==0)
+			{
+				evenarray[evenindex]=arr[i];
+				evenindex++;
+			}else if((arr[i]%2==1)) {
+				oddarray[oddindex]=arr[i];
+				oddindex++;
+			}
+		}
+		System.out.print("even elements is : ");
+	  for (int i = 0; i < evenarray.length; i++) {
+		
+		  System.out.print(evenarray[i]+",");
+	}
+	  System.out.println();
+	  System.out.print("odd elements is : ");
+	  for (int i = 0; i < oddarray.length; i++) {
+		System.out.print(oddarray[i]+",");
+	}
+		
+	}
+	
+}
+
+7.     WAPTP nth largest element.
+
+public class Nth_largestelement {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter array size");
+		int size=sc.nextInt();
+		int []arr=new int[size];
+		System.out.println("enter array elements in one by one order");
+		for (int i = 0; i < arr.length; i++) {
+			arr[i]=sc.nextInt();
+		}
+		System.out.println("enter a number to find nth largest element");
+		int n=sc.nextInt();
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = i+1; j < arr.length; j++) {
+				if(arr[i]<arr[j])
+				{
+					int temp=arr[i];
+					arr[i]=arr[j];
+					arr[j]=temp;
+					
+				}
+			}
+		}
+		// 1 2 3 4 5 6
+		for (int i = 0; i < arr.length; i++) {
+			if(i==(n-1))
+			{
+			    System.out.print(n+"th largest element is : "+arr[i]+" ");
+			}
+		}
+		
+	}
+}
+
+8.	WAPTP how many times an element occurred in an array.
+			(or)
+	 WAPTP occurrence of each element in an array.
+
+public class Occurance_ofanelement {
+
+	static Scanner sc=new Scanner(System.in);
+	public static int[] array(int size)
+	{
+		int [] a=new int[size];
+		System.out.println("enter the elements one by one order");
+		for (int i = 0; i < a.length; i++) {
+			a[i]=sc.nextInt();
+		}
+		return a;
+	}
+	public static void main(String[] args) {
+		System.out.println("enter the array size");
+		int size=sc.nextInt();
+		int[] arr = array(size);
+		
+		for (int i = 0; i < arr.length; i++) {
+			int count=0;
+			boolean b=false;
+			for (int j = 0; j < i; j++) {
+				if(arr[i]==arr[j])
+				{
+					b=true;
+					break;
+				}
+			}
+			if(b==false)
+			{
+				for (int j = 0; j < arr.length; j++) {
+					if(arr[i]==arr[j])
+					{
+						count++;
+					}
+				}
+				System.out.println(arr[i]+" is present in "+count+" times");
+			}
+			
+		}
+	}
+}
+
+9.    WAPTP how many duplicate elements are present in an array.
+
+public class Duplicates_presentinarray {
+
+	static Scanner sc=new Scanner(System.in);
+	public static int[] array(int size)
+	{
+		int [] a=new int[size];
+		System.out.println("enter the elements one by one order");
+		for (int i = 0; i < a.length; i++) {
+			a[i]=sc.nextInt();
+		}
+		return a;
+	}
+	public static int countofduplicates(int []a)
+	{
+		int duplicatecount=0;
+		for (int i = 0; i < a.length; i++) {
+			int count=0;
+			boolean b=false;
+			for (int j = 0; j < i; j++) {
+				if(a[i]==a[j])
+				{
+					b=true;
+					break;
+					
+				}
+			}
+			if(b==false)
+			{
+				for (int j = 0; j < a.length; j++) {
+					if(a[i]==a[j])
+					{
+						count++;
+					}
+				}
+				if(count>1)
+				{
+					duplicatecount++;
+				}
+			}
+		}
+		return duplicatecount;
+	}
+	public static void main(String[] args) {
+		System.out.println("enter array size ");
+		int size=sc.nextInt();
+		int[] arr = array(size);
+		int countofduplicates = countofduplicates(arr);
+		System.out.println("the duplicates elements present in a array is : "+countofduplicates);
+	}
+}
+
+11.	WAPTP how many elements are divisible by 3 and 5 and print the elements.
+
+public class Elements_aredivisibleby3_and_5 {
+
+	static Scanner sc=new Scanner(System.in);
+	public static int[] array(int size)
+	{
+		int [] a=new int[size];
+		System.out.println("enter the elements one by one order");
+		for (int i = 0; i < a.length; i++) {
+			a[i]=sc.nextInt();
+		}
+		return a;
+	}
+	public static int[] countofelements_isdivisibleby3and5(int []a)
+	{
+		int count=0;
+		for (int i = 0; i < a.length; i++) {
+			if(a[i]%3==0&&a[i]%5==0)
+			{
+				count++;
+			}
+		}
+		int []div=new int[count];
+		int index=0;
+		for (int i = 0; i < a.length; i++) {
+			if(a[i]%3==0&&a[i]%5==0)
+			{
+				div[index]=a[i];
+				index++;
+			}
+		}
+		return div;
+	}
+	public static void main(String[] args) {
+		System.out.println("enter array size  ");
+		int size=sc.nextInt();
+		int[] a = array(size);
+		int[] isdivisibleby3and5 = countofelements_isdivisibleby3and5(a);
+		System.out.println("the elements are divisible by 3 and 5 is : "+isdivisibleby3and5.length);
+		for (int i = 0; i < isdivisibleby3and5.length; i++) {
+			System.out.print(isdivisibleby3and5[i]+",");
+		}
+	}
+}
+
+12.	WAPTP common elements in two arrays.
+
+public class The_commonelements_twoarrays {
+
+	static Scanner sc=new Scanner(System.in);
+	public static int[] array(int size)
+	{
+		int [] a=new int[size];
+		System.out.println("enter the elements one by one order");
+		for (int i = 0; i < a.length; i++) {
+			a[i]=sc.nextInt();
+		}
+		return a;
+	}
+	
+	public static int[] commonelementarray(int []a,int []b)
+	{
+		int count=0;
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < b.length; j++) {
+				if(a[i]==b[j])
+				{
+					count++;
+				}
+			}
+		}
+		 int []com=new int[count];
+		 int index=0;
+		 for (int i = 0; i < a.length; i++) {
+				for (int j = 0; j < b.length; j++) {
+					if(a[i]==b[j])
+					{
+						com[index]=a[i];
+						index++;
+					}
+				}
+			}
+		 return com;
+	}
+	public static void main(String[] args) {
+		System.out.println("enter the size of an array");
+		int s1 =sc.nextInt();
+		System.out.println("enter another array size");
+		int s2 =sc.nextInt();
+		int[] arr1 = array(s1);
+		int[] arr2 = array(s2);
+		int[] commonelementarray = commonelementarray(arr1,arr2);
+		System.out.println("common elements is : ");
+		for (int i = 0; i < commonelementarray.length; i++) {
+			System.out.print(commonelementarray[i]+",");
+		}
+		
+	}
+}
+
+13.      WAPTP first half of an array separately and second half separately.
+
+public class Half_Array {
+
+	static Scanner sc=new Scanner(System.in);
+	public static int[] array(int size)
+	{
+		int [] a=new int[size];
+		System.out.println("enter the elements one by one order");
+		for (int i = 0; i < a.length; i++) {
+			a[i]=sc.nextInt();
+		}
+		return a;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("enter array size");
+		int size=sc.nextInt();
+		int[] arr = array(size);
+		int []firsthalf=new int[arr.length/2];
+		int index1=0;
+		int []secondhalf=new int[arr.length-firsthalf.length];
+		int index2=0;
+		for (int i = 0; i < arr.length; i++) {
+			if(i<firsthalf.length)
+			{
+				firsthalf[index1]=arr[i];
+				index1++;
+			}else
+			{
+				secondhalf[index2]=arr[i];
+				index2++;
+			}
+			
+		}
+		System.out.println("first half of the array is : ");
+		for (int i = 0; i < firsthalf.length; i++) {
+			System.out.print(firsthalf[i]+" ");
+		}
+		System.out.println();
+		System.out.println("second half of the array is :  ");
+		for (int i = 0; i < secondhalf.length; i++) {
+			System.out.print(secondhalf[i]+" ");
+		}
+	}
+}
+
+14.	WAPTP reverse array elements in array and print them.
+
+public class Reverse_thearray {
+
+	static Scanner sc=new Scanner(System.in);
+	public static int[] array(int size)
+	{
+		int [] a=new int[size];
+		System.out.println("enter the elements one by one order");
+		for (int i = 0; i < a.length; i++) {
+			a[i]=sc.nextInt();
+		}
+		return a;
+	}
+	
+	public static int[] reverse(int []a)
+	{
+		int swapingcount=a.length/2;
+		int x=0;int y=a.length-1;
+		for (int i = 0; i < swapingcount; i++) {
+			int temp=a[x];
+			a[x]=a[y];
+			a[y]=temp;
+			x++;
+			y--;
+		}
+		return a;
+	}
+	public static void main(String[] args) {
+		System.out.println("enter array size ");
+		int size=sc.nextInt();
+		int[] a = array(size);
+		 
+		int[] reverse = reverse(a);
+		System.out.println("reverse order of an array is : ");
+		for (int i = 0; i < reverse.length; i++) {
+			System.out.print(reverse[i]+" ");
+		}
+	}
+	
+}
+
+15.	 WAPTP reverse only certain array elements in array and print them.
+
+public class ReverseOrderOf_Certaainpart {
+
+	static Scanner sc=new Scanner(System.in);
+	public static int[] array(int size)
+	{
+		int [] a=new int[size];
+		System.out.println("enter the elements one by one order");
+		for (int i = 0; i < a.length; i++) {
+			a[i]=sc.nextInt();
+		}
+		return a;
+	}
+	public static int[] reversepariticularelements(int []a,int m,int n)
+	{
+		int temp=a[m];
+		a[m]=a[n];
+		a[n]=temp;
+		return a;
+	}
+	public static void main(String[] args) {
+		System.out.println("enter array size");
+		int size=sc.nextInt();
+		int[] a = array(size);
+		System.out.println("enter starting point to sawp");
+		int m=sc.nextInt();
+		System.out.println("enter ending point to swap");
+		int n=sc.nextInt();
+		int[] reversepariticularelements = reversepariticularelements(a,m,n);
+		for (int i = 0; i < reversepariticularelements.length; i++) {
+			System.out.print(reversepariticularelements[i]+" ");
+		}
+		
+	}
+}
+
+16.	WAPTP merge two arrays and print third array.
+
+
+public class Merging_TwoArrays {
+
+	static Scanner sc=new Scanner(System.in);
+	public static int[] array(int size)
+	{
+		int [] a=new int[size];
+		System.out.println("enter the elements one by one order");
+		for (int i = 0; i < a.length; i++) {
+			a[i]=sc.nextInt();
+		}
+		return a;
+	}
+	
+	public static int [] merge(int[]a,int[]b)
+	{
+		int []c=new int[a.length+b.length];
+		int index=0;
+		for (int i = 0; i < a.length; i++) {
+			c[index]=a[i];
+			index++;
+		}
+		for (int i = 0; i < b.length; i++) {
+			c[index]=b[i];
+			index++;
+		}
+		return c;
+	}
+	public static void main(String[] args) {
+		System.out.println("enter array size");
+		int size=sc.nextInt();
+		System.out.println("enter second array size");
+		int size2=sc.nextInt();
+		int[] a= array(size);
+		int[] b= array(size2);
+		int[] merge = merge(a,b);
+		for (int i = 0; i < merge.length; i++) {
+			System.out.print(merge[i]+" ");
+		}
+	}
+}
+
+17.	WAPT merge two arrays and print only even elements of third array.
+
+public class Merge_twoarrays_printevenelements {
+
+	static Scanner sc=new Scanner(System.in);
+	public static int[] array(int size)
+	{
+		int [] a=new int[size];
+		System.out.println("enter the elements one by one order");
+		for (int i = 0; i < a.length; i++) {
+			a[i]=sc.nextInt();
+		}
+		return a;
+	}
+	
+	public static int [] merge(int[]a,int[]b)
+	{
+		int []c=new int[a.length+b.length];
+		int index=0;
+		for (int i = 0; i < a.length; i++) {
+			c[index]=a[i];
+			index++;
+		}
+		for (int i = 0; i < b.length; i++) {
+			c[index]=b[i];
+			index++;
+		}
+		return c;
+	}
+	public static void main(String[] args) {
+		System.out.println("enter array size");
+		int size=sc.nextInt();
+		System.out.println("enter second array size");
+		int size2=sc.nextInt();
+		int[] a= array(size);
+		int[] b= array(size2);
+		int[] merge = merge(a,b);
+		for (int i = 0; i < merge.length; i++) {
+			if(merge[i]%2==0)
+			{
+				System.out.print(merge[i]+" ");
+			}
+		}
+	}
+}
+
+18.	WAPTP merge two arrays and print only odd elements of third array.
+
+static Scanner sc=new Scanner(System.in);
+	public static int[] array(int size)
+	{
+		int [] a=new int[size];
+		System.out.println("enter the elements one by one order");
+		for (int i = 0; i < a.length; i++) {
+			a[i]=sc.nextInt();
+		}
+		return a;
+	}
+	
+	public static int [] merge(int[]a,int[]b)
+	{
+		int []c=new int[a.length+b.length];
+		int index=0;
+		for (int i = 0; i < a.length; i++) {
+			c[index]=a[i];
+			index++;
+		}
+		for (int i = 0; i < b.length; i++) {
+			c[index]=b[i];
+			index++;
+		}
+		return c;
+	}
+	public static void main(String[] args) {
+		System.out.println("enter array size");
+		int size=sc.nextInt();
+		System.out.println("enter second array size");
+		int size2=sc.nextInt();
+		int[] a= array(size);
+		int[] b= array(size2);
+		int[] merge = merge(a,b);
+		for (int i = 0; i < merge.length; i++) {
+			if(merge[i]%2!=0)
+			{
+				System.out.print(merge[i]+" ");
+			}
+		}
+	}
+}
+
+19.   WAPTP the two elements which produce  Highest product and print those two elements
+
+public class Highestproduct {
+
+	static Scanner sc=new Scanner(System.in);
+	public static int[] array(int size)
+	{
+		int [] a=new int[size];
+		System.out.println("enter the elements one by one order");
+		for (int i = 0; i < a.length; i++) {
+			a[i]=sc.nextInt();
+		}
+		return a;
+	}
+	public static void main(String[] args) {
+		System.out.println("enter size of the array");
+		int size=sc.nextInt();
+		int[] a = array(size);
+		int pro=1;
+		int m=0;
+		int n=0;
+		for (int i = 0; i < a.length; i++) {
+			for (int j = i+1; j < a.length; j++) {
+				if(a[i]*a[j]>pro)
+				{
+					pro=a[i]*a[j];
+					m=a[i];n=a[j];
+				}
+			}
+		}
+		System.out.println("Highest product of this two numbers is "+pro+"("+m+","+n+")");
+		
+	}
+}
+
+

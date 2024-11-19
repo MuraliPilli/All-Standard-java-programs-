@@ -1,0 +1,1411 @@
+All Stsndard programs
+-----------------------
+
+01. WAPTP natural numbers within the given range
+
+public class AllNaturalnumbers {
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number for set a range");
+		int n =sc.nextInt();
+		System.out.println("all natural numbers with in range");
+		for (int i =1; i <=n; i++) {
+			System.out.println(i);
+		}
+	}
+}
+
+02. WAPTP even natural numbers within the given range.
+
+public class AllevenNaturalnumbers {
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number for set a range");
+		int n =sc.nextInt();
+		System.out.println("all even natural numbers with in range");
+		for (int i =1; i <=n; i++) {
+			if(i%2==0)
+			{
+			System.out.println(i);
+			}
+		}
+	}
+}
+
+03. WAPTP odd natural numbers within the given range.
+
+public class AllOddNaturalnumbers {
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number for set a range");
+		int n =sc.nextInt();
+		System.out.println("all odd natural numbers with in range");
+		for (int i =1; i <=n; i++) {
+			if(i%2!=0)
+			{
+			System.out.println(i);
+			}
+		}
+	}
+}
+
+04. WAPTP numbers which are divisible by both 5 and 3 in the given range.
+
+public class AllNaturalnumbersdivisibleby5and3 {
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number for set a range");
+		int n =sc.nextInt();
+		System.out.println("all  natural numbers which is divisible by 3 and 5 with in given range");
+		for (int i =1; i <=n; i++) {
+			if(i%5==0 && i%3==0)
+			{
+			System.out.println(i);
+			}
+		}
+	}
+}
+
+05. WAPTP numbers which are divisible by given number in given range.
+
+public class Naturalnumbersdivisiblebygivennumber {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number for set range");
+		int n=sc.nextInt();
+		System.out.println("enter a number for division");
+		int d=sc.nextInt();
+		for (int i = 1; i <=n; i++) {
+			if(i%d==0)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+}
+
+06. WAPTP multiplication table of a given number.(ex:-2*1=2,2*2=4,2*3=6……..).
+
+public class TableOfagivennumber {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		for (int i =1; i <=10; i++) {
+			System.out.println(n + "*" +i+ "=" +n*i);
+		}
+	}
+}
+
+
+07. WAPTP divisors/factors of a given number.
+
+
+public class factorsOfagivennumber {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		System.out.println("factors");
+		for (int i = 1; i <=n; i++) {
+			if(n%i==0)
+			{
+				System.out.println(i);
+			}
+		}
+	}
+}	
+
+08. WAPT count factors of a given number.
+
+public class Countoffactors {
+
+	public static void main(String[] args) {
+		
+			Scanner sc=new Scanner(System.in);
+			
+			System.out.println("enter a number");
+			int n=sc.nextInt();
+			
+			int count=0;
+			for (int i = 1; i <=n; i++) {
+				if(n%i==0)
+				{
+					count++;
+				}
+			}
+			System.out.println("number of factors -"+count);
+		
+	}
+}
+
+09. WAPTP sum of natural numbers in range.
+
+public class Sumofnaturalnumbers {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int sum=0;
+		for (int i = 1; i <=n; i++) {
+			sum +=i;
+		}
+		System.out.println("summeation of all natural numbers - "+sum);
+	}
+}
+
+10. WAPTP product of natural numbers in range.
+
+public class Productofnaturalnumbers {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter e number");
+		int n=sc.nextInt();
+		int product=1;
+		for (int i = 1; i <=n; i++) {
+			product *=i;
+		}
+		System.out.println("product is - "+product);
+	}
+}
+
+11. WAPTP factorial of a given number (numbers only less than 10).
+
+public class factorial {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number less or equal than 10");
+		int n=sc.nextInt();
+		int pro=1;
+		for (int i = 1; i <=n && n<=10; i++) {
+			pro *=i;
+		}
+		System.out.println("factorial of a given number -"+pro);
+	}
+}
+
+12.  WAPT check given number is prime number or not
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class PrimeNoornot {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int count=0;
+		for (int i = 1; i <=n; i++) {
+			if(n%i==0)
+			{
+				count++;
+			}
+		}
+		if(count==2)
+		{
+			System.out.println(n +" is a prime number");
+		}else
+		{
+			System.out.println(n +" is not a prime number");
+		}
+	}
+}
+
+13. WAPTP prime numbers in range with serial numbers.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Primenumbers_withserialnumbers {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number for starting point");
+		int n=sc.nextInt();
+		System.out.println("enter another number to ending point");
+		int n2=sc.nextInt();
+		
+		int sln=1;
+		
+		for (int i = n; i <=n2; i++) {
+			int n3=i;
+			int count=0;
+			for (int j = 1; j <=n3; j++) {
+				if(n3%j==0)
+				{
+					count++;
+				}
+			}
+			if(count==2)
+			{
+				System.out.println(sln+"-"+n3);
+				sln++;
+			}
+		}
+		
+	}
+}
+
+14. WAPTP first n prime numbers.
+
+
+public class Prlindrome_Prime_GivenRange {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		for (int j = 1; j <=n; j++) {
+			
+		
+		int count=0;
+		for (int i = 1; i<=j; i++) {
+			if(j%i==0)
+			{
+				count++;
+			}
+		}
+		int rev=0;
+		int x=j;
+		while(x!=0)
+		{
+			int temp=x%10;
+			rev =rev*10+temp;
+			x /=10;
+		}
+		if(rev==j&&count==2)
+		{
+			System.out.println(j);
+			
+		}
+		}
+	}
+}
+
+15. WAPTP nth prime number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Print_Nth_primenumber {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number for nth prime number");
+		int n=sc.nextInt();
+		int sln=1;
+		for (int i = 1; sln <=n; i++) {
+			int count=0;
+			for (int j = 1; j <=100; j++) {
+				if(i%j==0)
+				{
+					count++;
+				}
+			}
+			if(count==2)
+			{
+				if(sln==n)
+				{
+					System.out.println(sln+"-"+i);
+				}
+				sln++;
+			}
+		}
+	}
+}
+
+16. WAPTP next prime number which comes after the given number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Print_nextPrimenuber {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		for (;true;) {
+			n++;
+			int count=0;
+			for (int i = 1; i <=n; i++) {
+				if(n%i==0)
+				{
+					count++;
+				}
+			}
+			if(count==2)
+			{
+				System.out.println("next prime number - "+n);
+				break;
+			}
+		}
+	}
+}
+
+17. WAPTP sum of the factors of a given number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Sum_ofFactors {
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int sum=0;
+		for (int i = 1; i <=n; i++) {
+			if(n%i==0)
+			{
+				sum +=i;
+			}
+		}
+		System.out.println("sum -"+sum);
+	}
+}
+
+
+18. WAPT check given number is perfect number or not.
+
+
+public class Perfect_Number {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int sum=0;
+		for (int i = 1; i <n; i++) {
+			if(n%i==0)
+			{
+				sum +=i;
+			}
+		}
+		if(sum==n)
+		{
+			System.out.println(n+" is a perfect number");
+		}else
+		{
+			System.out.println("given number is not a perfect number");
+		}
+	}
+}
+
+19. WAPTP perfect numbers which are present between  1 to 50000 with serial numbers.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Print_1_5000_Perfectnumbers {
+	public static void main(String[] args) {
+		for (int i = 1; i <=5000; i++) {
+			int n=i;
+			int sum=0;
+			for (int j = 1; j <n; j++) {
+				if(n%j==0)
+				{
+					sum +=j;
+				}
+			}
+			if(sum==n)
+			{
+				System.out.println(n);
+			}
+		}
+	}
+}
+
+20. WAPT count digits present in the given number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class CountofDigits {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int count=0;
+		while(n!=0)
+		{
+			int temp=n%10;
+			count++;
+			n=n/10;
+		}
+		System.out.println("count of digits is - "+count);
+	}
+}
+
+21. WAPT count even and odd digits present in the given number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class EVENcounr_ODDcount {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int evencount=0;
+		int oddcount=0;
+		while(n!=0)
+		{
+			int temp=n%10;
+			if(temp%2==0)
+			{
+				evencount++;
+			}else {
+				oddcount++;
+			}
+			n /=10;
+		}
+		System.out.println("even count is -"+evencount);
+		System.out.println("odd count is -"+oddcount);
+	}
+}
+
+22. WAPT check given number is SPY number or not.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class SPYnumber {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int sum=0;
+		int pro=1;
+		int n2=n;
+		while(n!=0)
+		{
+			int temp=n%10;
+			sum +=temp;
+			pro *=temp;
+			n /=10;
+		}
+		if(sum==pro)
+		{
+			System.out.println(n2 +"- is a spy number");
+		}else
+		{
+			System.out.println(n2 +"- is not a spy number");
+		}
+	}
+}
+
+23. WAPTP spy numbers present in the given range with serial number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class StringnumbergivenRange {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter Starting range");
+		int n1=sc.nextInt();
+		System.out.println("enter a number for ending");
+		int n2=sc.nextInt();
+		for (int k = n1; k <=n2; k++) {
+		int temp=k;
+		int sum=0;
+		while(temp!=0)
+		{
+			int rem=temp%10;
+			int pro=1;
+			for (int i = 1; i <=rem; i++) {
+				pro *=i;
+			}
+			sum +=pro;
+			temp /=10;
+		}
+		if(sum==k)
+		{
+			System.out.println(k);
+		}
+	}
+	}
+
+}
+
+24. WAPTP first n spy numbers.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Frist_Nspynumbers {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int sln=1;
+		for (int i = 1; i <=n; i++) {
+			int n2=i;
+			int sum=0;
+			int pro=1;
+			
+			while(n2!=0)
+			{
+				int temp=n2%10;
+				sum +=temp;
+				pro *=temp;
+				n2 /=10;
+			}
+			if(sum==pro)
+			{
+				System.out.println(sln+"- "+i);
+				sln++;
+			}
+		}
+	}
+}
+
+25. WAPTP nth spy number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Nth_spynumber {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int sln=1;
+		for (int i = 1; sln <=n; i++) {
+			int n2=i;
+			int sum=0;
+			int pro=1;
+			
+			while(n2!=0)
+			{
+				int temp=n2%10;
+				sum +=temp;
+				pro *=temp;
+				n2 /=10;
+			}
+			if(sum==pro)
+			{
+				if(sln==n)
+				{
+				System.out.println(sln+"- "+i);
+				
+				}
+				sln++;
+			}
+		}
+	}
+}
+
+26. WAPTP next spy number for a given number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Next_Spynumber {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		while(true)
+		{
+			n++;
+			int pro=1;
+			int sum=0;
+			int x=n;
+			while(x!=0)
+			{
+				int temp =x%10;
+				sum +=temp;
+				pro *=temp;
+				x /=10;
+				
+			}
+			if(sum==pro)
+			{
+				System.out.println(n);
+				break;
+			}
+		}
+	}
+}
+
+27. WAPT reverse a given number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Reverse_theNumber {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int rev=0;
+		while(n!=0)
+		{
+			int temp=n%10;
+			rev=rev*10+temp;
+			n /=10;
+		}
+		System.out.println(rev);
+	}
+}
+
+
+28. WAPTC given number is palindrome or not.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Plindrome {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int rev=0;
+		int temp=n;
+		while (temp!=0)
+		{
+			int temp2=temp%10;
+			rev =rev*10+temp2;
+			temp /=10;
+		}
+		if(n==rev)
+		{
+			System.out.println(n+" is a palindrome number");
+		}else
+		{
+			System.out.println(n+" is not a palindrome number");
+		}
+
+	}
+}
+
+
+29. WAPTP palindromes present in the given range with serial number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Palindrome_givenRange {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter a number");
+		int n = sc.nextInt();
+		for (int i = 1; i <= n; i++) {
+
+			int rev = 0;
+			int temp = i;
+			while (temp != 0) {
+				int temp2 = temp % 10;
+				rev = rev * 10 + temp2;
+				temp /= 10;
+			}
+			if (i == rev) {
+				System.out.println(i + " is a palindrome number");
+			}
+
+		}
+	}
+}
+
+30. WAPTP first n palindromes with serial number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Frist_nPlindromenumber {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter a number");
+		int n = sc.nextInt();
+		int sln=1;
+		for (int i = 1; sln <= n; i++) {
+
+			int rev = 0;
+			int temp = i;
+			while (temp != 0) {
+				int temp2 = temp % 10;
+				rev = rev * 10 + temp2;
+				temp /= 10;
+			}
+			if (i == rev) {
+				System.out.println(sln+"- "+i);
+				sln++;
+			}
+
+		}
+	}
+}
+
+
+31. WAPTP nth palindrome for a given n value.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Nth_palindromeNumber {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int sln=1;
+		for (int i = 1; sln <=n; i++) {
+			int rev=0;
+			int x=i;
+			while(x!=0)
+			{
+				int temp=x%10;
+				rev =rev*10+temp;
+				x /=10;
+			}
+			if(rev==i)
+			{
+				if(sln==n)
+				{
+				System.out.println(sln+" -"+i);
+				}
+				sln++;
+			}
+			
+		}
+		
+	}
+}
+
+32. WAPTP next palindrome for the given n value.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Next_Palindromenumber {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter a number");
+		int n = sc.nextInt();
+		while (true) {
+			n++;
+			int rev = 0;
+			int x = n;
+			while (x != 0) {
+				int temp = x % 10;
+				rev = rev * 10 + temp;
+				x /= 10;
+			}
+			if (rev == n) {
+
+				System.out.println(" next palindrome is " + n);
+				break;
+			}
+		}
+
+	}
+
+}
+
+33. WAPTP Previous palindrome number for a given number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Previous_PalindromeNumber {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("enter a number");
+		int n = sc.nextInt();
+		while (true) {
+			n--;
+			int rev = 0;
+			int x = n;
+			while (x != 0) {
+				int temp = x % 10;
+				rev = rev * 10 + temp;
+				x /= 10;
+			}
+			if (rev == n) {
+
+				System.out.println(" next palindrome is " + n);
+				break;
+			}
+		}
+
+	}
+
+}
+
+34. WAPT check given number is both prime and palindrome(prime-palindrome) or not.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class GivenNumber_Prime_Palindrome {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int count=0;
+		for (int i = 1; i <=n; i++) {
+			if(n%i==0)
+			{
+				count++;
+			}
+		}
+		int rev=0;
+		int x=n;
+		while(x!=0)
+		{
+			int temp=x%10;
+			rev =rev*10+temp;
+			x /=10;
+		}
+		if(rev==n&&count==2)
+		{
+			System.out.println(n+" is prime number");
+			System.out.println(n+" is palindrome number");
+		}else
+		{
+			System.out.println(n+" is not prime number");
+			System.out.println(n+" is not palindrome number");
+		}
+	}
+	
+}
+
+35. WAPTP prime-Palindromes which are present b/w given range.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Prlindrome_Prime_GivenRange {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		for (int j = 1; j <=n; j++) {
+			
+		
+		int count=0;
+		for (int i = 1; i<=j; i++) {
+			if(j%i==0)
+			{
+				count++;
+			}
+		}
+		int rev=0;
+		int x=j;
+		while(x!=0)
+		{
+			int temp=x%10;
+			rev =rev*10+temp;
+			x /=10;
+		}
+		if(rev==j&&count==2)
+		{
+			System.out.println(j);
+			
+		}
+		}
+	}
+}
+
+
+36. WAPTC given number is Strong number or not.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Strongnumber {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int temp=n;
+		int sum=0;
+		while(temp!=0)
+		{
+			int rem=temp%10;
+			int pro=1;
+			for (int i = 1; i <=rem; i++) {
+				pro *=i;
+			}
+			sum +=pro;
+			temp /=10;
+		}
+		if(sum==n)
+		{
+			System.out.println(n+" is a Strong number");
+		}else
+		{
+			System.out.println(n+" is a not a string number");
+		}
+	}
+}
+
+37. WAPTP strong numbers present b/w the given range.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class StringnumbergivenRange {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter Starting range");
+		int n1=sc.nextInt();
+		System.out.println("enter a number for ending");
+		int n2=sc.nextInt();
+		for (int k = n1; k <=n2; k++) {
+		int temp=k;
+		int sum=0;
+		while(temp!=0)
+		{
+			int rem=temp%10;
+			int pro=1;
+			for (int i = 1; i <=rem; i++) {
+				pro *=i;
+			}
+			sum +=pro;
+			temp /=10;
+		}
+		if(sum==k)
+		{
+			System.out.println(k);
+		}
+	}
+	}
+
+}
+
+38. WAPTC given number is Armstrong number or not.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class ArmStringnumber {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int temp=n;
+		int count=0;
+		while(temp!=0)
+		{
+			count++;
+			temp /=10;
+		}
+		int sum=0;
+		temp=n;
+		while(temp!=0)
+		{
+			
+			int rem=temp%10;
+			int pro=1;
+			for (int i = 1; i <=count; i++) {
+				pro *=rem;
+			}
+			sum +=pro;
+			temp /=10;
+		}
+		if(sum==n)
+		{
+			System.out.println(n+" is a armstrong number");
+		}else
+		{			
+			System.out.println(n+" is not a arm strong number");
+		}
+	}
+}
+
+
+39. WAPT print all  Armstrong numbers in the given range.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Armstrongnumbergivenrange {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter 1st  number");
+		int n1=sc.nextInt();
+		System.out.println("enter 2nd  number");
+		int n2=sc.nextInt();
+		for (int k = n1; k <=n2; k++) {
+			
+		int ex=k;
+		int temp=ex;
+		int count=0;
+		while(temp!=0)
+		{
+			count++;
+			temp /=10;
+		}
+		int sum=0;
+		temp=ex;
+		while(temp!=0)
+		{
+			
+			int rem=temp%10;
+			int pro=1;
+			for (int i = 1; i <=count; i++) {
+				pro *=rem;
+			}
+			sum +=pro;
+			temp /=10;
+		}
+		if(sum==ex)
+		{
+			System.out.println(ex);
+		}
+	}
+	}
+
+}
+
+40. WAPTP first n Fibonacci terms.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class FabonacciSeries {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a=0;
+		int b=1;
+		int sum=1;
+		int sln=1;
+		System.out.println("ALL febonacci series between 1 to 100");
+		for (int i = 1; sum <=100; i++) {
+			System.out.println(sln+" - "+sum);
+			sln++;
+			a=b;
+			b=sum;
+			sum=a+b;
+		}
+	}
+}
+
+41. WAPTP non-Fibonacci terms present in range.
+
+
+package standardprograms;
+
+public class Non_FabonacciSeries {
+	public static void main(String[] args) {
+		int a=0;
+		int b=1;
+		int sum=0;
+		for (int i = 0; i <=10; i++) {
+			if(sum !=i)
+			{
+				System.out.println(i);
+			}else
+			{
+				sum=a+b;
+				a=b;
+				b=sum;
+			}
+		}
+	}
+}
+
+42. WAPTP Fibonacci terms in reverse order.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class FabonacciReverseorder {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int a=0;
+		int b=1;
+		int sum=1;
+		int sln=1;
+		System.out.println("ALL febonacci series between 1 to 100");
+		for (int i = 100; sum >=1; i++) {
+			System.out.println(sln+" - "+sum);
+			sln++;
+			a=b;
+			b=sum;
+			sum=a+b;
+		}
+	}
+}
+
+43. WAPTF hcf of given two numbers.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class HCF {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("enter a numer");
+	int n1=sc.nextInt();
+	System.out.println("enter another nummber");
+	int n2=sc.nextInt();
+	int hcf=0;
+	for (int i = 1; i <=n1&&i<=n2; i++) {
+		if(n1%i==0&&n2%i==0)
+		{
+			hcf=i;
+		}
+	}
+	System.out.println(hcf+" is hcf of "+n1+","+n2);
+}
+}
+
+44. WAPTF lcm of the given two numbers.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class LCM {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n1=sc.nextInt();
+		System.out.println("enter another number");
+		int n2=sc.nextInt();
+		
+		for (int i =1; true; i++) {
+			if((n1*i)%n2==0)
+			{
+				System.out.println(n1*i);
+				break;
+			}
+		}
+	}
+}
+
+45. WAPTC given numbers are co-prime or not.
+
+package standardprograms;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Co_primenumber {
+	public static int count(int n)
+	{
+		int count=0;
+		for (int i = 1; i <=n; i++) {
+			if(n%i==0)
+			{
+				count++;
+			}
+		}
+		return count;
+	}
+	public static int[] factors(int n, int count)
+	{
+		int []a=new int[count];
+		int size=0;
+		for (int i = 1; i <=n; i++) {
+			if(n%i==0)
+			{
+				a[size]=i;
+				size++;
+			}
+		}
+		return a;
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();int n1=sc.nextInt();
+		int c1=count(n);
+		int c2=count(n1);
+		 
+		int []a1=factors(n,c1);
+		int []a2=factors(n1,c2);
+
+		int co=0;
+		int co1=0;
+		for (int i = 0; i < a1.length; i++) {
+			for (int j = 0; j < a2.length; j++) {
+				if(a1[i]==a2[j])
+				{
+					co=a1[i];
+					co1=a2[j];
+				}
+			}
+		}
+		if(co==1&&co1==1)
+		{
+			System.out.println(n+","+n1+" numbera are co-primes");
+		}else
+		{
+			System.err.println(n+","+n1+" numbera are Not co-primes");
+		}
+	}
+}
+
+46. WAPT swap to values in two variables with using third variable and without using third variable.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class SwapTwonumbers_withoutusingthirdvariable {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		System.out.println("enter another number");
+		int n2=sc.nextInt();
+		n=(n2+n);
+		n2=(n-n2);
+		n=(n-n2);
+		System.out.println("n-"+n);
+		System.out.println("n2-"+n2);
+		
+		
+	}
+}
+
+
+47. WAPTC given number is perfect number or not.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Perfect_Number {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int sum=0;
+		for (int i = 1; i <n; i++) {
+			if(n%i==0)
+			{
+				sum +=i;
+			}
+		}
+		if(sum==n)
+		{
+			System.out.println(n+" is a perfect number");
+		}else
+		{
+			System.out.println("given number is not a perfect number");
+		}
+	}
+}
+
+
+48. WAPT convert given number to binary number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Binarynumber {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number");
+		int n=sc.nextInt();
+		int binary=0;
+		int base=1;
+		while(n!=0)
+		{
+			int rem=n%2;
+			binary = binary+rem*base;
+			base=base*10;
+			n=n/2;
+			
+		}
+		System.out.println("binary number is --> "+binary);
+	}
+}
+
+49. WAPT convert binary number to decimal number.
+
+package standardprograms;
+
+import java.util.Scanner;
+
+public class Binary_decimal {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a number in binary from");
+		int n=sc.nextInt();
+		int dce=0;
+		int base=1;
+		while(n!=0)
+		{
+			int rem=n%10;
+			dce=dce+base*rem;
+			base =base*2;
+			n=n/10;
+		}
+		System.out.println(dce);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
